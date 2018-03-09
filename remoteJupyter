@@ -1,0 +1,22 @@
+# Insatll
+$ pip3 install jupyter --user
+
+# Generate Config File
+$ jupyter notebook --generate-config
+
+# In Python3 Console
+>> from IPython.lib import passwd
+>> passwd()
+Enter password: 
+Verify password: 
+'sha1:*****************' 
+
+# Modify Config File
+$ vim ~/.jupyter/jupyter_notebook_config.py
+# Add the password
+c.NotebookApp.ip='*'
+c.NotebookApp.password = u'sha1:*****************'
+c.NotebookApp.open_browser = False
+
+
+# Now can open jupyter in your client browser with http://address_of_remote:8888
